@@ -1,0 +1,4 @@
+data/*.csv
+notebook/catboost_info/
+.ipynb_checkpoints/
+.DS_Store
