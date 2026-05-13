@@ -142,17 +142,13 @@ The engineered feature model did not improve performance over the original CatBo
 
 ## How to Run
 
-Install dependencies:
+1. Download the Kaggle diabetes dataset and place `train.csv` and `test.csv` inside the `data/` folder.
 
-pip install -r requirements.txt
+2. Open the notebook:
 
-Place Kaggle data files in:
+notebook/diabetes-prediction.ipynb
 
-data/raw/
-
-Run the notebook:
-
-notebooks/diabetes_prediction.ipynb
+3. Run the notebook cells sequentially.
 
 ---
 
@@ -161,7 +157,6 @@ notebooks/diabetes_prediction.ipynb
 diabetes-prediction-ml/
 
 ├── README.md  
-├── requirements.txt  
 ├── .gitignore  
 ├── LICENSE  
 ├── data/  
