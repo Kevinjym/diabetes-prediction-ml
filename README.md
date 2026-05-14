@@ -60,13 +60,12 @@ CatBoost was selected because the dataset contains both numerical and categorica
 
 ## Key Results
 
-| Experiment | CV AUC |
-|------------|--------|
-| Baseline CatBoost | 0.7209 |
-| 5-Fold CatBoost | 0.7209 |
-| Dropping top features | 0.6302 |
-| Engineered features | 0.7203 |
-| Final selected model | 0.7209 |
+| Experiment | AUC |
+|---|---:|
+| Baseline CatBoost Single Split | 0.72088 |
+| Stratified K-Fold CatBoost | 0.72093 |
+| Ablation: Drop Top 2 Features | 0.63018 |
+| Feature Engineering | 0.72046 |
 
 ---
 
@@ -111,7 +110,7 @@ Feature engineering did not significantly improve performance in this experiment
 | Ablation: Drop Top 2 Features | 0.63018 |
 | Feature Engineering | 0.72046 |
 
-The Stratified K-Fold CatBoost model achieved the most stable validation performance, with a CV AUC of approximately 0.72088.
+The Stratified K-Fold CatBoost model achieved the most stable validation performance, with a CV AUC of approximately 0.72093.
 
 The ablation study showed that removing `family_history_diabetes` and `physical_activity_minutes_per_week` caused a major performance drop, reducing AUC to approximately 0.630. This suggests that these two variables carry substantial predictive signal.
 
@@ -160,8 +159,7 @@ diabetes-prediction-ml/
 ├── .gitignore  
 ├── LICENSE  
 ├── data/  
-│   ├── train.csv  
-│   └── test.csv  
+│   └── .gitkeep
 ├── images/  
 │   ├── feature_importance.png  
 │   └── target_distribution.png  
@@ -169,4 +167,3 @@ diabetes-prediction-ml/
 │   ├── diabetes_prediction.ipynb  
 │   ├── diabetes-prediction-draft2.pdf  
 │   └── catboost_info/  
-└── src/
